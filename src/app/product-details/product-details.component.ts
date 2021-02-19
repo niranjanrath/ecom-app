@@ -21,7 +21,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
       this.currentProductId = params.id;
     });
 
-    this.currentProduct = {id: this.currentProductId, name: 'Product Name', description: 'Product Description', amount: 45};
+    this.currentProduct = {id: this.currentProductId, name: `Product Name ${this.currentProductId}`, description: `Product Description ${this.currentProductId}`, amount: 45};
   }
 
   ngOnDestroy(): void {
