@@ -10,13 +10,8 @@ import {Subscription} from 'rxjs';
 })
 export class AddToCartComponent implements OnInit {
   @Input() product: Product;
-  subscription: Subscription;
 
   constructor(private cartService: CartService) {
-    this.subscription = cartService.addedProduct$.subscribe(
-      selectedProduct => {
-        this.product = selectedProduct;
-      });
   }
 
   ngOnInit(): void {

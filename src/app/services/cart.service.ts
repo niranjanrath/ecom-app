@@ -8,19 +8,12 @@ import {Subject} from 'rxjs';
 export class CartService {
   shoppingItemList: Product[] = [];
 
-  // Observable sources
-  private addedProductSource = new Subject<Product>();
-
-  // Observable streams
-  addedProduct$ = this.addedProductSource.asObservable();
-
   constructor() {
   }
 
   // Service message commands
   addProductToCart(product: Product): void {
     this.shoppingItemList.push(product);
-    this.addedProductSource.next(product);
   }
 
   removeProductFromCart(product: Product): void {
