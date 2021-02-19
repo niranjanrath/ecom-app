@@ -1,0 +1,15 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">PRODUCTS</h1>
+  </div>
+</section>
+
+<section>
+  <div class="container container mt-4 mb-5">
+    <div class="row">
+      <div *ngFor="let product of productList" class="col-md-4 mb-4">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </div>
+  </div>
+</section>
