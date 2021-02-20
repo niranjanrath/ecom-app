@@ -22,4 +22,8 @@ export class CartService {
       this.shoppingItemList.splice(index, 1);
     }
   }
+
+  checkoutFromCart(): void {
+    this.shoppingItemList.splice(0, this.shoppingItemList.length);
+  }
 }
